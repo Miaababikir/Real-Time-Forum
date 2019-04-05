@@ -10,6 +10,16 @@ use Symfony\Component\HttpFoundation\Response;
 class LikeController extends Controller
 {
 
+    /**
+     * Create a new LikeController instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('JWT', ['except' => ['index']]);
+    }
+
     public function index(Reply $reply)
     {
         return $reply->like()->count();
