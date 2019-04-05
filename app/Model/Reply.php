@@ -23,4 +23,19 @@ class Reply extends Model
     {
         return $this->hasMany(Like::class);
     }
+
+    public function likeIt()
+    {
+        $this->like()->create([
+            'user_id' => '1'
+        ]);
+    }
+
+    /**
+     * @throws \Exception
+     */
+    public function unLikeIt()
+    {
+        $this->like()->where('user_id', '1')->first()->delete();
+    }
 }
