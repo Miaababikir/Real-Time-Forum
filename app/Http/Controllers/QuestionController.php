@@ -31,7 +31,7 @@ class QuestionController extends Controller
 
         Question::create($request->only(['title', 'body', 'slug', 'user_id', 'category_id']));
 
-        return \response('Created', Response::HTTP_ACCEPTED);
+        return \response('Created', Response::HTTP_CREATED);
     }
 
     /**
