@@ -54,7 +54,9 @@ class QuestionController extends Controller
      */
     public function update(Request $request, Question $question)
     {
-        //
+        $question->update($request->only(['title', 'body', 'slug']));
+
+        return \response('Updated', Response::HTTP_ACCEPTED);
     }
 
     /**
