@@ -5,10 +5,27 @@
                 <v-toolbar-title>Miaababikir</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-toolbar-items class="hidden-sm-and-down">
-                    <v-btn flat>Forum</v-btn>
-                    <v-btn flat>Ask Question</v-btn>
-                    <v-btn flat>Category</v-btn>
-                    <v-btn flat>Login</v-btn>
+
+                    <v-btn flat>
+                        <router-link to="/">
+                            Forum
+                        </router-link>
+                    </v-btn>
+                    <v-btn flat>
+                        <router-link to="">
+                            Ask Question
+                        </router-link>
+                    </v-btn>
+                    <v-btn flat>
+                        <router-link to="">
+                            Category
+                        </router-link>
+                    </v-btn>
+                    <v-btn flat>
+                        <router-link to="/login">
+                            Login
+                        </router-link>
+                    </v-btn>
                 </v-toolbar-items>
             </v-toolbar>
         </template>
@@ -16,9 +33,7 @@
 </template>
 
 <script>
-    export default {
-
-    };
+    export default {};
 </script>
 
 <style scoped></style>
