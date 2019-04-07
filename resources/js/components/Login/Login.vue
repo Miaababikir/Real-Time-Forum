@@ -15,6 +15,9 @@
                     required
                 ></v-text-field>
                 <v-btn color="green" type="submit">Login</v-btn>
+                <router-link to="/signup">
+                    <v-btn color="blue" type="submit">Sign Up</v-btn>
+                </router-link>
             </form>
         </v-container>
     </div>
@@ -28,6 +31,11 @@
                     email: null,
                     password: null
                 }
+            }
+        },
+        created() {
+            if (User.loggedIn()) {
+                this.$router.push('forum');
             }
         },
         methods: {

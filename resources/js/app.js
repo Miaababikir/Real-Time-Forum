@@ -19,7 +19,7 @@ import User from './Helpers/User';
 
 window.User = User;
 
-User.hasToken();
+window.EventBus = new Vue();
 
 
 /**
